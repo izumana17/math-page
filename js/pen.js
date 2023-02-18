@@ -1,3 +1,4 @@
+//Pentagon portion
 function pen(ans){
     i++;
     const add=document.getElementById('divSec');

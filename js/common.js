@@ -1,3 +1,4 @@
+//common function for rhombus and triangle
 function common(ans, id){
     i++;
     const add=document.getElementById('divSec');

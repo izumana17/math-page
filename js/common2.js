@@ -1,3 +1,4 @@
+//coomon function for Rectangle and allipse
 function commonTwo(ans,id){
     i++;
     const add=document.getElementById('divSec');

@@ -23,7 +23,7 @@
     <section class=" row d-flex gx-4">
         <div id="div-1" class="col-md-9 col-12 ">
             <div  class="card-group">
-                <div id="cardColorChange" onmouseover="clr()" class="card">
+                <div id="cardColorChange" onmouseover="clr()" onmouseout="clrWhite()"class="card">
                   <img src="images/triangle.png" class="card-img-top w-75 mx-auto my-3 img-responsive" style="height: 170px;" alt="...">
                   <div class="card-body">
                     <h5 class="card-title text-center">Triangle</h5>
@@ -124,6 +124,12 @@
   const a= document.getElementById('cardColorChange');
   a.style.backgroundColor= clr;
 };
+
+
+function clrWhite(){
+    const a= document.getElementById('cardColorChange');
+  a.style.backgroundColor= 'white';
+}
 </script>
 
 
