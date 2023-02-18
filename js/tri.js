@@ -13,7 +13,7 @@ function tri(ans){
     
     const pa=document.createElement('span');
     pa.innerText=ans+' cm2';
-    pa.style.margin="0px 20px 0px 50px"
+    pa.style.margin="50px 20px 50px 50px"
 
 
 
@@ -26,10 +26,13 @@ function tri(ans){
     pt.style.borderRadius="5px";
     
 
+     const hr=document.createElement('hr');
+     
     div.appendChild(p);
     div.appendChild(pa);
     div.appendChild(pt);
     divSec.appendChild(div);
+    divSec.appendChild(hr);
     
 }
 
