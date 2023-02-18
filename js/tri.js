@@ -1,11 +1,12 @@
 
 
 function tri(ans){
+    i++;
     const add=document.getElementById('divSec');
     const div=document.createElement('div');
 
     const p=document.createElement('span');
-    p.innerText='      Triangle  ';
+    p.innerText=i+'.      Triangle  ';
 
     const pt=document.createElement('span');
     pt.innerText=' Convert to m2 ';
@@ -21,13 +22,14 @@ function tri(ans){
     pt.style.backgroundColor='#1184e8';
     pt.style.color='white';
     pt.style.padding="8px";
-    pt.style.marginLeft="100px";
+    pt.style.marginLeft="50px";
     pt.style.border="2px solid white";
     pt.style.borderRadius="5px";
     
 
      const hr=document.createElement('hr');
      
+    
     div.appendChild(p);
     div.appendChild(pa);
     div.appendChild(pt);
