@@ -1,39 +1,39 @@
-function rec(ans){
-    i++;
-    const add=document.getElementById('divSec');
-    const div=document.createElement('div');
+// function rec(ans){
+//     i++;
+//     const add=document.getElementById('divSec');
+//     const div=document.createElement('div');
 
-    const p=document.createElement('span');
-    p.innerText=i+'. Rectangle  ';
+//     const p=document.createElement('span');
+//     p.innerText=i+'. Rectangle  ';
 
-    const pt=document.createElement('span');
-    pt.innerText=' Convert to m2 ';
+//     const pt=document.createElement('span');
+//     pt.innerText=' Convert to m2 ';
 
     
-    const pa=document.createElement('span');
-    pa.innerText=ans+' cm2';
-    pa.style.margin="20px 10px 20px 10px";
+//     const pa=document.createElement('span');
+//     pa.innerText=ans+' cm2';
+//     pa.style.margin="20px 10px 20px 10px";
 
 
 
 
-    pt.style.backgroundColor='#1184e8';
-    pt.style.color='white';
-    pt.style.padding="8px";
-    pt.style.marginLeft="50px";
-    pt.style.border="2px solid white";
-    pt.style.borderRadius="5px";
+//     pt.style.backgroundColor='#1184e8';
+//     pt.style.color='white';
+//     pt.style.padding="8px";
+//     pt.style.marginLeft="50px";
+//     pt.style.border="2px solid white";
+//     pt.style.borderRadius="5px";
     
 
-    const hr=document.createElement('hr');
+//     const hr=document.createElement('hr');
      
-    div.appendChild(p);
-    div.appendChild(pa);
-    div.appendChild(pt);
-    divSec.appendChild(div);
-    divSec.appendChild(hr);
+//     div.appendChild(p);
+//     div.appendChild(pa);
+//     div.appendChild(pt);
+//     divSec.appendChild(div);
+//     divSec.appendChild(hr);
     
-}
+// }
 
 document.getElementById('rec').addEventListener('click', function(){
     const rec1Field= document.getElementById('rec1');
@@ -55,6 +55,7 @@ document.getElementById('rec').addEventListener('click', function(){
         return;
     }
     // console.log(ans);
-    rec(ans);
+    // rec(ans);
+    commonTwo(ans,1);
 
 });
