@@ -22,8 +22,8 @@
     </section>
     <section class=" row d-flex gx-4">
         <div id="div-1" class="col-md-9 col-12 ">
-            <div class="card-group">
-                <div class="card">
+            <div  class="card-group">
+                <div id="cardColorChange" onmouseover="clr()" class="card">
                   <img src="images/triangle.png" class="card-img-top w-75 mx-auto my-3 img-responsive" style="height: 170px;" alt="...">
                   <div class="card-body">
                     <h5 class="card-title text-center">Triangle</h5>
@@ -116,7 +116,15 @@
             <h1 class="text-center mb-2"><u>Area Calculation</u></h1>
         </div>
     </section>
-
+<script>
+    function clr(){
+  let n = (Math.random() * 0xfffff * 1000000).toString(16);
+  let clr= '#' + n.slice(0, 6);
+  console.log(clr);
+  const a= document.getElementById('cardColorChange');
+  a.style.backgroundColor= clr;
+};
+</script>
 
 
 <script>
