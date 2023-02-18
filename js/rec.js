@@ -11,7 +11,7 @@ function rec(ans){
     
     const pa=document.createElement('span');
     pa.innerText=ans+' cm2';
-    pa.style.margin="5px 20px 5px 50px"
+    pa.style.margin="20px 20px 20px 20px";
 
 
 
@@ -46,9 +46,13 @@ document.getElementById('rec').addEventListener('click', function(){
     // console.log(t1val);
     // console.log(t2val);
 
-    const ans= r1val*r2val;
+    const ans= (r1val*r2val).toFixed(2);
     rec1Field.value='';
     rec2Field.value='';
+    if(ans==='NaN' || ans<0){
+        alert('PLEASE ENTER POSITIVE NUMBERS BOTH FIELDS!!!!');
+        return;
+    }
     // console.log(ans);
     rec(ans);
 

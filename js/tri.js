@@ -13,7 +13,7 @@ function tri(ans){
     
     const pa=document.createElement('span');
     pa.innerText=ans+' cm2';
-    pa.style.margin="50px 20px 50px 50px"
+    pa.style.margin="20px 20px 20px 20px";
 
 
 
@@ -48,10 +48,16 @@ document.getElementById('tri').addEventListener('click', function(){
     // console.log(t1val);
     // console.log(t2val);
 
-    const ans= .5*t1val*t2val;
+    const ans= (.5*t1val*t2val).toFixed(2);
     tri1Field.value='';
     tri2Field.value='';
+    if(ans==='NaN' || ans<0){
+        alert('PLEASE ENTER POSITIVE NUMBERS BOTH FIELDS!!!');
+        return;
+    }
+
     // console.log(ans);
     tri(ans);
+    
 
 });

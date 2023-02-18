@@ -1,19 +1,37 @@
 
-
 function el(ans){
     const add=document.getElementById('divSec');
     const div=document.createElement('div');
+
     const p=document.createElement('span');
+    p.innerText='Ellipse  ';
 
     const pt=document.createElement('span');
-    pt.innerText='  Convert to m2';
+    pt.innerText=' Convert to m2 ';
 
-    p.innerText='      Ellipse  '+ans;
+    
+    const pa=document.createElement('span');
+    pa.innerText=ans+' cm2';
+    pa.style.margin="20px 20px 20px 20px";
+
+
+
+
+    pt.style.backgroundColor='#1184e8';
+    pt.style.color='white';
+    pt.style.padding="8px";
+    pt.style.marginLeft="100px";
+    pt.style.border="2px solid white";
+    pt.style.borderRadius="5px";
     
 
+    const hr=document.createElement('hr');
+     
     div.appendChild(p);
+    div.appendChild(pa);
     div.appendChild(pt);
     divSec.appendChild(div);
+    divSec.appendChild(hr);
     
 }
 
@@ -29,9 +47,13 @@ document.getElementById('el').addEventListener('click', function(){
     // console.log(t1val);
     // console.log(t2val);
 
-    const ans= 3.1416*el1val*el2val;
+    const ans= (3.1416*el1val*el2val).toFixed(2);
     el1Field.value='';
     el2Field.value='';
+    if(ans==='NaN' || ans<0){
+        alert('PLEASE ENTER POSITIVE NUMBERS IN BOTH FIELDS!!!!');
+        return;
+    }
     // console.log(ans);
     el(ans);
 

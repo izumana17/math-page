@@ -1,19 +1,36 @@
-
-
 function pen(ans){
     const add=document.getElementById('divSec');
     const div=document.createElement('div');
+
     const p=document.createElement('span');
+    p.innerText='Pentagon  ';
 
     const pt=document.createElement('span');
-    pt.innerText='  Convert to m2';
+    pt.innerText=' Convert to m2 ';
 
-    p.innerText='      Pentagon  '+ans;
+    
+    const pa=document.createElement('span');
+    pa.innerText=ans+' cm2';
+    pa.style.margin="20px 20px 20px 20px";
+
+
+
+
+    pt.style.backgroundColor='#1184e8';
+    pt.style.color='white';
+    pt.style.padding="8px";
+    pt.style.marginLeft="100px";
+    pt.style.border="2px solid white";
+    pt.style.borderRadius="5px";
     
 
+    const hr=document.createElement('hr');
+     
     div.appendChild(p);
+    div.appendChild(pa);
     div.appendChild(pt);
     divSec.appendChild(div);
+    divSec.appendChild(hr);
     
 }
 
@@ -29,9 +46,13 @@ document.getElementById('pen').addEventListener('click', function(){
     // console.log(t1val);
     // console.log(t2val);
 
-    const ans= .5*pen1val*pen2val;
+    const ans= (.5*pen1val*pen2val).toFixed(2);
     pen1Field.value='';
     pen2Field.value='';
+    if(ans==='NaN' || ans<0){
+        alert('PLEASE ENTER POSITIVE NUMBERS BOTH FIELDS!!!!');
+        return;
+    }
     // console.log(ans);
     pen(ans);
 

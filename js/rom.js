@@ -11,7 +11,7 @@ function rhom(ans){
     
     const pa=document.createElement('span');
     pa.innerText=ans+' cm2';
-    pa.style.margin="5px 20px 5px 50px"
+    pa.style.margin="20px 20px 20px 20px";
 
 
 
@@ -46,9 +46,13 @@ document.getElementById('rhom').addEventListener('click', function(){
     // console.log(t1val);
     // console.log(t2val);
 
-    const ans= .5*rhom1val*rhom2val;
+    const ans= (.5*rhom1val*rhom2val).toFixed(2);
     rhom1Field.value='';
     rhom2Field.value='';
+    if(ans==='NaN' || ans<0){
+        alert('PLEASE ENTER POSITIVE NUMBERS BOTH FIELDS!!!!');
+        return;
+    }
     // console.log(ans);
     rhom(ans);
 
