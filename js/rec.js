@@ -6,10 +6,16 @@ document.getElementById('rec').addEventListener('click', function(){
     const rec2Field= document.getElementById('rec2');
     const rec2Value= rec2Field.value;
 
-    const r1val= parseFloat(rec1Value).toFixed(2);
-    const r2val= parseFloat(rec2Value).toFixed(2);
+    const r1val= parseFloat(rec1Value);
+    const r2val= parseFloat(rec2Value);
     // console.log(t1val);
     // console.log(t2val);
+    if(r1val<0 || r2val<0){
+        alert('PLEASE ENTER POSITIVE NUMBERS IN BOTH FIELDS!!!!');
+        rec1Field.value='';
+        rec2Field.value='';
+        return;
+    }
 
     const ans= (r1val*r2val).toFixed(2);
     rec1Field.value='';

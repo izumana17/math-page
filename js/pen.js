@@ -43,10 +43,18 @@ document.getElementById('pen').addEventListener('click', function(){
     const pen2Field= document.getElementById('pen2');
     const pen2Value= pen2Field.value;
 
-    const pen1val= parseFloat(pen1Value).toFixed(2);
-    const pen2val= parseFloat(pen2Value).toFixed(2);
+    const pen1val= parseFloat(pen1Value);
+    const pen2val= parseFloat(pen2Value);
     // console.log(t1val);
     // console.log(t2val);
+    if(pen1val<0 || pen2val<0){
+        alert('PLEASE ENTER POSITIVE NUMBERS IN BOTH FIELDS!!!!');
+        pen1Field.value='';
+        pen2Field.value='';
+        return;
+    }
+
+
 
     const ans= (.5*pen1val*pen2val).toFixed(2);
     pen1Field.value='';

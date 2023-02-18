@@ -43,10 +43,16 @@ document.getElementById('el').addEventListener('click', function(){
     const el2Field= document.getElementById('el2');
     const el2Value= el2Field.value;
 
-    const el1val= parseFloat(el1Value).toFixed(2);
-    const el2val= parseFloat(el2Value).toFixed(2);
+    const el1val= parseFloat(el1Value);
+    const el2val= parseFloat(el2Value);
     // console.log(t1val);
     // console.log(t2val);
+    if(el1val<0 || el2val<0){
+        alert('PLEASE ENTER POSITIVE NUMBERS IN BOTH FIELDS!!!!');
+        el1Field.value='';
+        el2Field.value='';
+        return;
+    }
 
     const ans= (3.1416*el1val*el2val).toFixed(2);
     el1Field.value='';

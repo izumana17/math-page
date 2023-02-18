@@ -6,10 +6,16 @@ document.getElementById('tri').addEventListener('click', function(){
     const tri2Field= document.getElementById('tri2');
     const tri2Value= tri2Field.value;
 
-    const t1val= parseFloat(tri1Value).toFixed(2);
-    const t2val= parseFloat(tri2Value).toFixed(2);
+    const t1val= parseFloat(tri1Value);
+    const t2val= parseFloat(tri2Value);
     // console.log(t1val);
     // console.log(t2val);
+    if(t1val<0 || t2val<0){
+        alert('PLEASE ENTER POSITIVE NUMBERS IN BOTH FIELDS!!!!');
+        tri1Field.value='';
+        tri2Field.value='';
+        return;
+    }
 
     const ans= (.5*t1val*t2val).toFixed(2);
     tri1Field.value='';
