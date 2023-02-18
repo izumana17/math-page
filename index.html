@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body class="container-fluid ">
+    <section class=" row d-flex gx-4">
+        <div id="div-1" class="col-md-9 col-12 ">
+            <div class="card-group">
+                <div class="card">
+                  <img src="images/triangle.png" class="card-img-top w-75 mx-auto my-3 img-responsive" style="height: 170px;" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Triangle</h5>
+                    <p class="card-text text-center">Area (A) = 0.5 x b x h</p>
+                    
+                    <div class="d-flex justify-content-center w-100 mb-2">
+                    <input id="tri1" type="text" class="w-25 h-75" placeholder="b"> <pre> cm </pre>
+                    <input id="tri2" type="text" class="w-25 h-75" placeholder="h"> <pre> cm </pre>
+                    </div>
+                    
+                    <button id="tri" class="btn btn-primary text-center w-100">Calculate</button>
+                  </div>
+                  
+                </div>
+                <div class="card">
+                  <img src="images/rectangle.png" class="card-img-top w-75 mx-auto my-3 img-responsive" style="height: 170px;" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Rectangle</h5>
+                    <p class="card-text text-center">Area (A) = w x I</p>
+                    <div class="d-flex justify-content-center w-100 mb-2">
+                        <input id="rec1" type="text" class="w-25 h-75" placeholder="w"> <pre> cm </pre>
+                        <input id="rec2" type="text" class="w-25 h-75"placeholder="I"> <pre> cm </pre>
+                        </div>
+                        
+                    <button id="rec" class="btn btn-primary text-center w-100">Calculate</button>
+                  </div>
+                  
+                </div>
+                <div class="card">
+                  <img src="images/parallelogram.png" class="card-img-top w-75 mx-auto my-3 img-responsive" style="height: 170px;" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Parallelogram</h5>
+                    <p class="card-text">Area (A) = b x h</p>
+                    <div class="d-flex justify-content-center w-100 mb-2">
+                        <input type="text" class="w-25 h-75" placeholder="b"> <pre> cm </pre>
+                        <input type="text" class="w-25 h-75" placeholder="h"> <pre> cm </pre>
+                        </div>
+                        
+                    <button class="btn btn-primary text-center w-100">Calculate</button>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="card-group">
+                <div class="card">
+                  <img src="images/rhombus.png" class="card-img-top w-75 mx-auto my-3 img-responsive" style="height: 170px;" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Rhombus</h5>
+                    <p class="card-text text-center">Area (A) =  0.5 d <sub>1</sub><span> x </span> d <sub>2</sub></p>
+                    <div class="d-flex justify-content-center w-100 mb-2">
+                        <input type="text" class="w-25 h-75" placeholder="d1"> <pre> cm </pre>
+                        <input type="text" class="w-25 h-75" placeholder="d2"> <pre> cm </pre>
+                        </div>
+                        
+                    <button class="btn btn-primary text-center w-100">Calculate</button>
+                  </div>
+                  
+                </div>
+                <div class="card">
+                  <img src="images/pentagon.png" class="card-img-top w-50 mx-auto my-3 img-responsive" style="height: 170px;" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Pantagon</h5>
+                    <p class="card-text text-center">Area (A) = 0.5 x p x b</p>
+                    <div class="d-flex justify-content-center w-100 mb-2">
+                        <input type="text" class="w-25 h-75" placeholder="p"> <pre> cm </pre>
+                        <input type="text" class="w-25 h-75" placeholder="b"> <pre> cm </pre>
+                        </div>
+                        
+                    <button class="btn btn-primary text-center w-100">Calculate</button>
+                  </div>
+                  
+                </div>
+                <div class="card">
+                  <img src="images/ellipse.png" class="card-img-top w-75 mx-auto my-3 img-responsive" style="height: 170px;" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Card title</h5>
+                    <p class="card-text text-center">Area (A) = πab</p>
+                    <div class="d-flex justify-content-center w-100 mb-2">
+                        <input type="text" class="w-25 h-75" placeholder="a"> <pre> cm </pre>
+                        <input type="text" class="w-25 h-75" placeholder="b"> <pre> cm </pre>
+                        </div>
+                        
+                    <button class="btn btn-primary text-center w-100">Calculate</button>
+                  </div>
+                  
+                </div>
+              </div>
+        </div>
+        <div id="divSec" class="border col-md-3 col-12 ">
+            <h1 class="text-center"><u>Area Calculation</u></h1>
+        </div>
+    </section>
+
+
+
+
+
+     <script src="js/tri.js"></script>
+     <script src="js/rec.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
